@@ -1,0 +1,15 @@
+body{
+    margin-top: 70px;
+    font-size: 16px;
+}
+
+.navbar-default{
+    border:0;
+    font-family: Poppins;
+}
+
+.sidebar{
+    position: absolute;
+    height:100%;
+    width: 30%;
+}
