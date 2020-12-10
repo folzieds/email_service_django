@@ -9,3 +9,9 @@ class EmailSent(models.Model):
 
     def __str__(self):
         return self.subject
+
+    def is_valid(self):
+        if self.mail_sender != '' and self.message != '' and self.subject != '':
+            return True
+        else:
+            return False

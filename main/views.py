@@ -34,4 +34,8 @@ def email(request):
 
             email_request.send_email_ssl()
 
-    return redirect('main/home.html')
+    return redirect('/')
+
+def test(request):
+    return render(request,
+                  'main/test.html')

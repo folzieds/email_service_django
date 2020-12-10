@@ -1,5 +1,5 @@
 body{
-    margin-top: 70px;
+    margin-top: 10px;
     font-size: 16px;
 }
 
@@ -8,8 +8,52 @@ body{
     font-family: Poppins;
 }
 
-.sidebar{
-    position: absolute;
-    height:100%;
-    width: 30%;
+/* The sidebar menu */
+.side-bar {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 20%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: lightskyblue; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+.sidenav{
+    margin-top: 30%;
+    margin-left: 30%;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-family: Roboto;
+    font-size: 16px;
+    color: #111;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+/* Style page content */
+.main {
+    margin-left: 20%; /* Same as the width of the sidebar */
+    margin-top: 0%;
+    padding: 0px 10px;
+}
+
+.email-body{
+    margin-top: 20%;
+}
+
+@media screen and (max-height: 450px) {
+    .side-bar {padding-top: 15px;}
+    .side-bar a {font-size: 18px;}
 }
