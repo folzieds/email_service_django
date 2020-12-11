@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import EmailSent
-from .EmailService import EmailService
+from main.services.EmailService import EmailService
 
 
 # Create your views here.
