@@ -24,15 +24,18 @@ def search(request):
                       )
 
 def email(request):
-    if request.method == "GET":
+    if request.method == "POST":
         form = EmailSent()
-        form.email_body = request.GET.get("message")
-        form.contact_name = request.GET.get("contact")
-        form.contact_email = request.GET.get("email")
+        form.message = request.POST['message']
+        form.mail_sender = request.POST['email']
+        form.subject = f"{request.POST['contact']} {request.POST['email']}"
+
         if form.is_valid():
             email_request = EmailService(form)
 
             email_request.send_email_ssl()
+
+        form.save()
 
     return redirect('/')
 

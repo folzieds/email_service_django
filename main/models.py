@@ -2,8 +2,9 @@ from django.db import models
 
 # Create your models here.
 class EmailSent(models.Model):
-    mail_sender = models.CharField(max_length=50)
-    mail_recipient = models.CharField(max_length=50)
+    mail_sender = models.CharField(max_length=255)
+    mail_recipient = models.CharField(max_length=255)
+    contact_name = models.CharField(max_length=180)
     message = models.TextField()
     subject = models.CharField(max_length=100)
 
@@ -11,7 +12,7 @@ class EmailSent(models.Model):
         return self.subject
 
     def is_valid(self):
-        if self.mail_sender != '' and self.message != '' and self.subject != '':
+        if self.mail_sender != '' and self.message != '':
             return True
         else:
             return False
