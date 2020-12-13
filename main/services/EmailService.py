@@ -43,7 +43,7 @@ class EmailService:
         except configparser.NoSectionError:
             logger.exception("Could not find a property!!!")
 
-        self.mail_content = f"{self.email_model.mail_sender}:\n{self.email_model.contact_name}\n\n{self.email_model.message}"
+        self.mail_content = f"From: {self.email_model.contact_name}\n\nEmail: {self.email_model.mail_sender}\n\n{self.email_model.message}"
 
 
     def mail_payload(self):

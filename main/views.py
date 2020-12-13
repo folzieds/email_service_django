@@ -28,6 +28,8 @@ def email(request):
         form = EmailSent()
         form.message = request.POST['message']
         form.mail_sender = request.POST['email']
+        form.mail_recipient  = "folzieds@gmail.com"
+        form.contact_name = request.POST['contact']
         form.subject = f"{request.POST['contact']} {request.POST['email']}"
 
         if form.is_valid():
