@@ -10,4 +10,14 @@ def index(request):
     })
 
 def add_task(request):
-    return redirect("tasks/index.html")
+
+    if request.method == "POST":
+        new_task = Task()
+        new_task.status = False
+        new_task.name = request.POST["task_name"]
+
+        new_task.save()
+    return redirect("/tasks")
+
+def update_task(request):
+    pass
