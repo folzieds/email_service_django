@@ -11,8 +11,8 @@
             {% for task in tasks %}
             <tr>
                  <td>
-                    <input type="checkbox" id="task" aria-label="Checkbox for following text input">
-                    <label for="task">{{ task.name }}</label>
+                    <input type="checkbox" id="task_check_{{ task.pk }}" name="task_check">
+                    <label for="task_check_{{ task.pk }}">{{ task.name }}</label>
                 </td>
             </tr>
             {% endfor %}
