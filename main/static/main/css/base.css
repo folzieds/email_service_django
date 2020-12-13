@@ -49,10 +49,6 @@ body{
     padding: 0px 10px;
 }
 
-.email-body{
-    margin-top: 20%;
-}
-
 @media screen and (max-height: 450px) {
     .side-bar {padding-top: 15px;}
     .side-bar a {font-size: 18px;}

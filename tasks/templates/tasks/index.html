@@ -4,18 +4,15 @@
     <table class="table table-striped table-bordered table-hover mt-5">
         <thead>
             <tr>
-                <th scope="col">Status</th>
-                <th scope="col">Task</th>
+                <th scope="col">Tasks</th>
             </tr>
         </thead>
         <tbody>
             {% for task in tasks %}
             <tr>
-                <td>
-                    <input type="checkbox"  id="customControlValidation1" value="{{ task.status }}">
-                </td>
                  <td>
-                    <label for="customControlValidation1">{{ task.name }}</label>
+                    <input type="checkbox" id="task" aria-label="Checkbox for following text input">
+                    <label for="task">{{ task.name }}</label>
                 </td>
             </tr>
             {% endfor %}
