@@ -16,11 +16,12 @@ def homepage(request):
 def search(request):
     if request.method == "GET":
         form = request.GET.get('q')
+        print(form)
 
         return render(request,
                       'main/home.html',
-                      {'tutorials': EmailSent.objects.filter(emailSent_content__contains=f'{form}'),
-                       'count':EmailSent.objects.filter(emailSent_content__contains=f'{form}').count()}
+                      {'tutorials': EmailSent.objects.filter(EmailSent__contains=f'{form}'),
+                       'count':EmailSent.objects.filter(message__contains=f'{form}').count()}
                       )
 
 def email(request):
